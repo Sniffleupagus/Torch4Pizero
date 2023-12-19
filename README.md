@@ -7,12 +7,12 @@ but I am able to follow this as a general guide and end up with an installable w
 I tried building on an actual pizeroW, but i think the memory requirements are too much. Instead I
 build it in a Docker container, emulating a 10-core 3.6 Ghz pizero. It takes about 5 hours to build.
 
+First release is prebuilt wheels for python 3.9 that work on the 2022 and 2023 raspiOS bulids with kernels 5.15.84 and 6.1.21 so far.
+
+Second release is for python 3.11 on RaspiOS based on Debian 12 "Bookworm"
 
 Information below was the first version of the build script. 01-run-chroot.sh has a lot of
 bug fixes compared to the text below.
-
-
-Prebuilt wheels for python 3.9 that work on the 2022 and 2023 raspiOS bulids with kernels 5.15.84 and 6.1.21 so far.
 
 <code>
 dd if=/dev/zero of=/swapfile1 bs=1024 count=3144000
